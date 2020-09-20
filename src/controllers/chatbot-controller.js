@@ -7,7 +7,10 @@ const { datetimeNow } = require('../utils/current-date-time');
 
 const chatbotFind = async (req, res) => {
   try {
-    const result = await dbsql.select('*').from('chatbot');
+    const { code_user } = req.body;
+    const result = await dbsql.select('*')
+    .from('chatbot')
+    .where('code_user', code_user);
 
     if (result) {
       res.send(result);
