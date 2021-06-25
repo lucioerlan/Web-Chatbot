@@ -1,0 +1,90 @@
+/* css do sinal verde de online */
+.dot {
+  height: 13px;
+  width: 13px;
+  background-color: lightgreen;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* css de balão de diálogo */
+.talk-bubble {
+  margin: 10px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: white;
+  border-radius: 15px 15px;
+}
+
+.tri-right.border.left-top:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -40px;
+  right: auto;
+  top: -8px;
+  bottom: auto;
+  border: 32px solid;
+  border-color: #666 transparent transparent transparent;
+}
+
+.tri-right.left-top:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: #eeeeee transparent transparent transparent;
+}
+
+.tri-right.border.right-top:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -40px;
+  top: -8px;
+  bottom: auto;
+  border: 32px solid;
+  border-color: #808080 transparent transparent transparent;
+}
+
+.tri-right.right-top:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -20px;
+  top: 0px;
+  bottom: auto;
+  border: 20px solid;
+  border-color: #108CF3 transparent transparent transparent;
+}
+
+.talktext {
+  padding: 1em;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+.talktext p {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.bg-tora-header{
+  background-color: #108CF3 !important;
+}

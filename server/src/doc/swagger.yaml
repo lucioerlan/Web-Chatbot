@@ -1,0 +1,177 @@
+openapi: 3.0.0
+info:
+  description: '<font size="2" color="red">MIT License</font>'
+  title: "CHATBOT"
+  contact:
+    name: Erlan Lucio
+    url: https://github.com/lucioerlan
+  version: '1.0'
+servers:
+- url: http://localhost:5000
+  variables: {}
+paths:
+  /get-view-chatbot:
+    get:
+      tags:
+      - ROUTES
+      summary: GET VIEW CHATBOT
+      operationId: GETVIEWCHATBOT
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /get-all-chatbot:
+    get:
+      tags:
+      - ROUTES
+      summary: GET ALL CHATBOT
+      operationId: GETALLCHATBOT
+      parameters:
+      - name: input
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: ingredientes do slime?
+      - name: activate
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+          example: 1
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /getid-chatbot:
+    get:
+      tags:
+      - ROUTES
+      summary: GET ID CHATBOT
+      operationId: GETIDCHATBOT
+      parameters:
+      - name: id
+        in: query
+        description: ''
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+          example: 60cd7e92ec5cef2a444d21cc
+      - name: Content-Type
+        in: header
+        description: ''
+        required: true
+        style: simple
+        schema:
+          type: string
+          example: application/json
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /store-chatbot:
+    post:
+      tags:
+      - ROUTES
+      summary: STORE CHATBOT
+      operationId: STORECHATBOT
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/STORECHATBOTREQUEST'
+            example:
+              activate: 1
+              input: 'Atenas, Onde fica? '
+              output: na Grécia
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /update-chatbot:
+    put:
+      tags:
+      - ROUTES
+      summary: UPDATE CHATBOT
+      operationId: UPDATECHATBOT
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UPDATECHATBOTREQUEST'
+            example:
+              id: 60cd90cc12acc32accb0e60b
+              activate: 1
+              input: 'Atenas, Onde fica? '
+              output: na Grécia.
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+components:
+  schemas:
+    STORECHATBOTREQUEST:
+      title: STORECHATBOTREQUEST
+      required:
+      - activate
+      - input
+      - output
+      type: object
+      properties:
+        activate:
+          type: integer
+          format: int32
+        input:
+          type: string
+        output:
+          type: string
+      example:
+        activate: 1
+        input: 'Atenas, Onde fica? '
+        output: na Grécia
+    UPDATECHATBOTREQUEST:
+      title: UPDATECHATBOTREQUEST
+      required:
+      - id
+      - activate
+      - input
+      - output
+      type: object
+      properties:
+        id:
+          type: string
+        activate:
+          type: integer
+          format: int32
+        input:
+          type: string
+        output:
+          type: string
+      example:
+        id: 60cd90cc12acc32accb0e60b
+        activate: 1
+        input: 'Atenas, Onde fica? '
+        output: na Grécia.
+tags:
+- name: ROUTES

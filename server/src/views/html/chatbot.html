@@ -1,0 +1,50 @@
+﻿
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/chatbot.css" type="text/css" />
+  <script src="js/chatbot.js"></script>
+  <link rel="icon" type="image/ico" href="img/favicon.ico"/>
+  <meta charset="utf-8" />
+  <title>Chatbot</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-tora-header">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">
+          <span class="dot"></span>&nbsp;Chatbot is online
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <br />
+
+    <!--CONTENT CHATBOT-->
+  <div>
+    <div style="overflow-y:scroll; height: 300px; width: 100%;" align="center" id="msg">
+      <div class="talk-bubble tri-right left-top" style="width: 90%; color:#808080; background-color: #eeeeee;">
+        <div class="talktext">
+          <img src="img/mix-bot.png" alt="" width="45" height="45"> Helo! How can I help?
+        </div>
+      </div>
+    </div>
+    <input type="text" id="input" class="form-control" onkeypress="return Send(event)" placeholder="Digite a sua mensagem e tecle Enter..." />
+  </div>
+ <!--CONTENT CHATBOT-->
+
+</body>
+  <script type="text/javascript">
+    function Send(e) {
+      if (e.keyCode == 13) {
+        perguntar()
+
+        return false
+      }
+    }
+  </script>
+</html>
