@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "f356e243-9f0a-4b5e-8e99-35699e490adb",
+		"name": "CHATBOT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ROUTES",
+			"item": [
+				{
+					"name": "GET VIEW CHATBOT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/get-view-chatbot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"get-view-chatbot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL CHATBOT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/get-all-chatbot?input=ingredientes do slime?&activate=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"get-all-chatbot"
+							],
+							"query": [
+								{
+									"key": "input",
+									"value": "ingredientes do slime?"
+								},
+								{
+									"key": "activate",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ID CHATBOT",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						},
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/getid-chatbot?id=60cd7e92ec5cef2a444d21cc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"getid-chatbot"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "60cd7e92ec5cef2a444d21cc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "STORE CHATBOT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"activate\": 1,\r\n    \"input\": \"Atenas, Onde fica? \",\r\n    \"output\": \"na Grécia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/store-chatbot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"store-chatbot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE CHATBOT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"60cd90cc12acc32accb0e60b\",\r\n    \"activate\": 1,\r\n    \"input\": \"Atenas, Onde fica? \",\r\n    \"output\": \"na Grécia.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/update-chatbot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"update-chatbot"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
