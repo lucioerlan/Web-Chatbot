@@ -29,7 +29,7 @@
 <!-- ABOUT THE PROJECT -->
 ## 🤔 About The Project
 
-A free, interactive map. With the best leaflet plugins..
+Build your first chatbot. Customize them to meet your business needs and bring your chatbot to life in minutes.
 
 **-** <a href="https://frontend-web-chatbot.herokuapp.com" target="_blank">Frontend</a>
 
